@@ -1,0 +1,26 @@
+html, body, #app {
+    height: 100%;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: 56px 1fr 100px;
+}
+
+.navmodificado{
+    background-color: #FEBB02;
+    color: #113C73;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #113C73;
+    color: whitesmoke;
+}
+
+.footer p {
+    margin: 0;
+}
