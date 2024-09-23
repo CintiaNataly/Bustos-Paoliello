@@ -4,19 +4,19 @@ import {getTodasNovedades, getTodasNovedadesId, crearNovedad, actualizarNovedad,
 const router = express.Router();
 
 
-// Todos los libros
+// Todas las novedades
 router.get('/', getTodasNovedades);
 
-// Libros por id
+// Novedades por id
 router.get('/:id', getTodasNovedadesId);
 
-// Crear libro
+// Crear novedad
 router.post('/', crearNovedad);
 
-// Actualizar un libro
+// Actualizar una Novedad
 router.put('/:id', actualizarNovedad);
 
-// Eliminar un libro
+// Eliminar una novedad
 router.delete('/:id', eliminarNovedad);
 
 export default router;

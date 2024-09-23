@@ -1,5 +1,14 @@
 [
-    {"id":1,"autor":"J. K. Rowling", "titulo": "lorem ipsum 1", "novedad":"acá va todo el texto 1"},
-    {"id":2,"autor":"Antoine de Saint-Exupéry", "titulo": "lorem ipsum 2", "novedad":"acá va todo el texto 2"}
-
+    {
+        "id": 1,
+        "autor": "CINTIA",
+        "titulo": "lorem ipsum 1",
+        "novedad": "acá va todo el texto 1"
+    },
+    {
+        "id": 2,
+        "autor": "FERNANDA",
+        "titulo": "lorem ipsum 2",
+        "novedad": "acá va todo el texto 2"
+    }
 ]

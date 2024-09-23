@@ -1,26 +1,36 @@
-html, body, #app {
+html, body {
     height: 100%;
+    margin: 0;
 }
 
 #app {
-    display: grid;
-    grid-template-rows: 56px 1fr 100px;
+    min-height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
 }
 
-.navmodificado{
-    background-color: #FEBB02;
-    color: #113C73;
+h1 {
+    display: none;
 }
 
-.footer {
+img {
+    width: 100%;
+}
+
+.logo {
+    margin-top: 3rem;
+}
+
+.texto {
+    font-size: 1.3rem;
+    margin: 3rem 0;
+}
+
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 60px;
     background-color: #113C73;
     color: whitesmoke;
-}
-
-.footer p {
-    margin: 0;
 }

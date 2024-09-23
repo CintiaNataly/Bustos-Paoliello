@@ -1,11 +1,11 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import novedadesRoutes from './routes/novedadesRoutes.js'; 
+import funcionesRoutes from './routes/funcionesRoutes.js';
 
 const app = express();
 const port = 3000;
-
 
 const __fileName = fileURLToPath(import.meta.url);
 app.use(express.json());
@@ -16,6 +16,6 @@ app.get("/", (req, res) => {
 })
 
 app.use('/novedades', novedadesRoutes);
-app.use('/funciones', funcionesRoutes);
+app.use('/funciones', funcionesRoutes); 
 
-app.listen(port, () => console.log(`http://localhost:${port}`))
+app.listen(port, () => console.log(`http://localhost:${port}`));
