@@ -9,16 +9,42 @@ html, body {
     flex-direction: column;
 }
 
+.navmodificado{
+    background-color: #FEBB02;
+    color: #113C73;
+    height: 70px;
+    font-weight: bolder;
+}
+
+.separador {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 20px; /* Opcional */
+}
+
+.left {
+    padding-left: 3rem;
+}
+
+.right {
+    padding-right: 3rem;
+}
+
+
 h1 {
     display: none;
 }
 
 img {
-    width: 100%;
+    width: 90%;
 }
 
 .logo {
     margin-top: 3rem;
+}
+
+.logo-nav {
+    max-width: 150px;
 }
 
 .texto {

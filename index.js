@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import novedadesRoutes from './routes/novedadesRoutes.js'; 
 import funcionesRoutes from './routes/funcionesRoutes.js';
+import usersRoutes from './routes/usersRoutes.js';
 
 const app = express();
 const port = 3000;
@@ -17,5 +18,26 @@ app.get("/", (req, res) => {
 
 app.use('/novedades', novedadesRoutes);
 app.use('/funciones', funcionesRoutes); 
+
+
+function verificarRol(rolesAdmitidos) {
+    return function(req, res, next){
+        const rolUsuario =req.headers['x-rol'];
+
+        if(rolesAdmitidos.includes(rolUsuario)){
+            next();
+        } else {
+            res.status(403).json({mesaje: "Acceso denegado"})
+        }
+    }
+}
+
+app.get("/panel", verificarRol(["admin", "super-admin"]), (req, res) =>{
+    res.send("Acceso permitido")
+});
+
+
+app.use('/usuarios', usersRoutes);
+
 
 app.listen(port, () => console.log(`http://localhost:${port}`));
